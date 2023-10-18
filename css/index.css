@@ -1,0 +1,511 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+input,
+button {
+  font-size: 15px;
+  padding: 8px 20px;
+  border-radius: 5px;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  outline: none;
+}
+
+button {
+  color: white;
+  border: 2px solid transparent;
+  background-color: var(--btn-color);
+}
+
+input:focus {
+  outline: none;
+  border: 2px solid transparent;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.7);
+}
+
+:root {
+  --primary-color: #c9dcee;
+  --secondary-color: #eaf0f6;
+  --third-color: #adc5dc;
+  --btn-color: rgba(94, 23, 220, 1);
+  --btn-color-active: #c8d6e4;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.red {
+  transition: all 0.3s;
+  background-color: #d81a1a;
+}
+
+.red:hover {
+  background-color: #f03529;
+}
+
+.green {
+  transition: all 0.3s;
+  background-color: rgba(40, 167, 69, 1);
+}
+
+.green:hover {
+  background-color: rgba(40, 167, 69, 0.9);
+}
+
+header .container {
+  height: 180px;
+}
+
+.wrapper-head-bar {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  align-items: center;
+  background-color: var(--primary-color);
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.wrapper-head-bar::after {
+  content: "";
+  position: absolute;
+  top: -25%;
+  left: -8%;
+  width: 150px;
+  height: 150px;
+  background-color: var(--third-color);
+  border-radius: 50%;
+}
+
+.wrapper-head-bar::before {
+  content: "";
+  position: absolute;
+  bottom: -25%;
+  right: -9%;
+  width: 150px;
+  height: 150px;
+  background-color: var(--third-color);
+  border-radius: 50%;
+}
+
+.head-bar-image {
+  width: 30%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.head-bar-image img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  margin-bottom: 40px;
+}
+
+.head-bar-content {
+  width: 50%;
+}
+
+.head-bar-content h1 {
+  margin-bottom: 5px;
+}
+
+.head-bar-content p {
+  font-size: 17px;
+  color: rgba(0, 0, 0, 0.7);
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+/* header end */
+
+/* main content start */
+/* search section start */
+.search-section {
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  flex-direction: column;
+  margin-block: 15px;
+  width: 100%;
+}
+
+#searchBook {
+  width: 100%;
+}
+
+#searchBook input {
+  width: 75%;
+}
+
+#searchBook button {
+  width: 18%;
+}
+
+#searchSubmit,
+#bookSubmit {
+  transition: all 0.3s;
+  background-color: var(--btn-color);
+}
+
+#searchSubmit:hover,
+#bookSubmit:hover {
+  background-color: rgba(94, 23, 220, 0.9);
+}
+
+#searchBookTitle {
+  margin-inline: 10px;
+}
+
+#bookSubmit {
+  width: 100%;
+}
+
+/* search section end */
+.wrapper-main-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 10px;
+}
+
+.bookCategory {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 10px;
+  padding: 0px 20px 20px 0;
+}
+
+.input-section {
+  padding: 0px 20px 20px 0;
+  width: 30%;
+}
+
+.wrapper-book-shelf {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 10px;
+  padding: 20px 10px 50px 20px;
+  border-radius: 10px;
+  width: 70%;
+  background-color: var(--secondary-color);
+  position: relative;
+}
+
+.book-shelf {
+  margin-bottom: 10px;
+  width: 50%;
+  overflow: hidden;
+}
+
+.removeAllBooks {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  width: 190px !important;
+}
+
+.book-shelf h2 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.book-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.book-item h3 {
+  word-wrap: break-word;
+  font-weight: 600;
+}
+
+.book-item p {
+  word-wrap: break-word;
+}
+
+.book-list .action {
+  width: 100%;
+  display: flex;
+  gap: 5px;
+}
+
+.book-list .action button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.book-list .action .green,
+.red {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.book-list article {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: var(--btn-color-active);
+  margin-bottom: 10px;
+}
+
+.input-section h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+#inputBook .input,
+.input-inline {
+  margin-bottom: 8px;
+}
+
+#inputBook label {
+  font-size: 14px;
+}
+
+.input input {
+  width: 100%;
+  margin-top: 5px;
+}
+
+/* main content end */
+
+/* confirm delete start */
+.wrapper-confirm-delete.show-confirm-delete {
+  display: block;
+  transform: scale(1);
+}
+
+.wrapper-confirm-delete-all.show-confirm-delete-all {
+  display: block;
+  transform: scale(1);
+}
+
+.wrapper-confirm-delete,
+.wrapper-confirm-delete-all {
+  display: none;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.7);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  transition: all 0.5s;
+  transform: scale(0);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.confirm-delete,
+.confirm-delete-all {
+  background-color: white;
+  width: 470px;
+  height: 190px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.header-confirm-delete {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px 10px 20px;
+}
+
+.close-confirm-delete,
+.close-confirm-delete-all {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.1);
+  color: black;
+  font-size: 18px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.close-confirm-delete:hover,
+.close-confirm-delete-all:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.header-confirm-delete h2,
+.wrapper-confirm-delete-all h2 {
+  font-weight: 400;
+}
+
+.deskripsi-confirm-delete span {
+  color: red;
+  font-weight: 600;
+}
+
+.confirm-delete p,
+.wrapper-confirm-delete-all p {
+  font-size: 16px;
+  padding: 10px 10px 10px 20px;
+}
+
+.btn-confirm-delete {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding-right: 10px;
+  gap: 20px;
+}
+
+.btn-confirm-delete .grey {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.btn-confirm-delete .red {
+  width: 90px;
+}
+
+@media (min-width: 768px) and (max-width: 829px) {
+  #searchBook input {
+    width: 55%;
+  }
+
+  #searchBook button {
+    width: 32%;
+  }
+}
+
+@media (max-width: 767px) {
+
+  /* Gaya CSS yang akan diterapkan pada ponsel */
+  body {
+    font-size: 14px;
+  }
+
+  input,
+  button {
+    font-size: 12px;
+  }
+
+  .container {
+    width: 90%;
+  }
+
+  header .container {
+    height: 300px;
+  }
+
+  .wrapper-head-bar {
+    gap: 35px;
+  }
+
+  .wrapper-head-bar::after {
+    top: -15%;
+    left: -30%;
+    width: 150px;
+    height: 150px;
+  }
+
+  .wrapper-head-bar::before {
+    bottom: -15%;
+    right: -25%;
+    width: 150px;
+    height: 150px;
+  }
+
+  .head-bar-content p {
+    font-size: 12px;
+  }
+
+  .head-bar-image {
+    width: 30%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .head-bar-image img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    margin-bottom: 40px;
+  }
+
+  .head-bar-content {
+    width: 50%;
+  }
+
+  .wrapper-main-content {
+    flex-direction: column;
+  }
+
+  .input-section {
+    padding: 0;
+    width: 100%;
+  }
+
+  .wrapper-book-shelf {
+    width: 100%;
+  }
+
+  .search-section {
+    margin-block: 20px;
+  }
+
+  #searchBook input {
+    width: 50%;
+  }
+
+  #searchBook button {
+    width: 30%;
+  }
+
+  .wrapper-book-shelf {
+    flex-direction: column;
+  }
+
+  .wrapper-book-shelf .book-shelf {
+    width: 100%;
+  }
+
+  .book-shelf h2 {
+    font-size: 17px;
+    font-weight: 600;
+  }
+
+  .confirm-delete,
+  .wrapper-confirm-delete-all {
+    width: 330px;
+    height: 205px;
+  }
+}

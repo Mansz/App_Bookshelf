@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Library Apps</title>
+  <!-- font -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
+    rel="stylesheet" />
+  <!-- css -->
+  <link rel="stylesheet" href="css/index.css" />
+  <!-- link favicon -->
+  <link rel="icon" type="image/png" href="assets/notebook.png" />
+  <!-- link icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+</head>
+
+<body>
+  <header>
+    <div class="container wrapper-head-bar">
+      <div class="head-bar-image">
+        <img src="assets/head-bar-image.png" alt="" />
+      </div>
+      <div class="head-bar-content">
+        <h1>Library Apps</h1>
+        <p>"Mengelola data Koleksi Buku Anda dengan Mudah.Siap Membantu Anda Mengelola data buku-buku Anda dengan
+          efisien
+          dan Menyenangkan."</p>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <section class="search-section">
+      <form id="searchBook">
+        <label for="searchBookTitle">Judul</label>
+        <input id="searchBookTitle" placeholder="Search .... " type="search" />
+        <button id="searchSubmit" type="submit">Cari</button>
+      </form>
+    </section>
+    <div class="wrapper-main-content">
+      <section class="input-section">
+        <h2>Masukkan Buku Baru</h2>
+        <form id="inputBook">
+          <div class="input">
+            <label for="inputBookTitle">Judul</label>
+            <input id="inputBookTitle" autofocus type="text" required />
+          </div>
+          <div class="input">
+            <label for="inputBookCategory">Kategori</label>
+            <select name="bookCategory" id="inputBookCategory" class="bookCategory" required>
+              <option value="" selected>Pilih kategori buku...</option>
+              <option value="Pendidikan">Pendidikan</option>
+              <option value="Politik">Politik</option>
+              <option value="Petualangan">Petualangan</option>
+              <option value="Komedia">Komedi</option>
+              <option value="Anak-anak">Anak-anak</option>
+              <option value="Dewasa">Dewasa</option>
+              <option value="Horor">Horor</option>
+              <option value="Misteri">Misteri</option>
+              <option value="Romantis">Romantis</option>
+              <option value="Novel">Novel</option>
+              <option value="Sejarah">Sejarah</option>
+            </select>
+          </div>
+          <div class="input">
+            <label for="inputBookAuthor">Penulis</label>
+            <input id="inputBookAuthor" type="text" required />
+          </div>
+          <div class="input">
+            <label for="inputBookYear">Tahun</label>
+            <input id="inputBookYear" type="number" required />
+          </div>
+          <div class="input-inline">
+            <label for="inputBookIsComplete">Selesai dibaca</label>
+            <input id="inputBookIsComplete" type="checkbox" />
+          </div>
+          <button id="bookSubmit" type="submit">Masukkan Buku ke rak <br /><span id="keteranganBuku">Belum selesai
+              dibaca</span></button>
+        </form>
+      </section>
+      <div class="wrapper-book-shelf">
+        <section class="book-shelf">
+          <h2>Belum selesai dibaca</h2>
+
+          <div id="incompleteBookshelfList" class="book-list"></div>
+        </section>
+
+        <section class="book-shelf">
+          <h2>Selesai dibaca</h2>
+
+          <div id="completeBookshelfList" class="book-list"></div>
+        </section>
+        <button class="removeAllBooks red" style="display: none">Hapus semua Buku</button>
+      </div>
+    </div>
+  </main>
+  <div class="wrapper-confirm-delete">
+    <div class="confirm-delete">
+      <div class="header-confirm-delete">
+        <h2>Konfirmasi Hapus</h2>
+        <span class="close-confirm-delete">
+          <i class="fas fa-times"></i>
+        </span>
+      </div>
+
+      <hr />
+      <p>
+        Apakah Anda yakin ingin menghapus buku ini ? <br />
+        Tindakan ini akan menghapus buku dari daftar buku secara permanen. <br />
+      </p>
+      <div class="btn-confirm-delete action">
+        <button id="batalDelete" class="grey">Batal</button>
+        <button id="deleteBook" class="red">Ok</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrapper-confirm-delete-all">
+    <div class="confirm-delete-all">
+      <div class="header-confirm-delete">
+        <h2>Konfirmasi Hapus</h2>
+        <span class="close-confirm-delete-all">
+          <i class="fas fa-times"></i>
+        </span>
+      </div>
+      <hr />
+      <p class="deskripsi-confirm-delete">
+        Apakah Anda yakin ingin menghapus <span>semua buku </span> ini ? <br />
+        Tindakan ini akan menghapus buku dari daftar buku secara permanen. <br />
+      </p>
+      <div class="btn-confirm-delete action">
+        <button id="batalDeleteAllBook" class="grey">Batal</button>
+        <button id="deleteAllBook" class="red">Ok</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/index.js"></script>
+</body>
+
+</html>
